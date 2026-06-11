@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  /* Luxury Noir · Crimson · Gold */
+  --color-background: #080808;
+  --color-foreground: #f0ebe3;
+
+  --color-bilhar-dark: #060606;
+  --color-bilhar-dark-2: #0d0d0d;
+  --color-bilhar-dark-3: #111111;
+  --color-bilhar-green: #820000;
+  --color-bilhar-green-light: #b91c1c;
+  --color-bilhar-green-bright: #ef4444;
+  --color-bilhar-gold: #c9a84c;
+  --color-bilhar-gold-light: #e8c96e;
+  --color-bilhar-wood: #8b4513;
+  --color-bilhar-wood-light: #a0522d;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+
+  --radius-lg: 0.625rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.375rem;
+
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  from { background-position: 0 0; }
+  to { background-position: -200% 0; }
+}
+
+/* ─── Base ─────────────────────────────── */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-bilhar-dark);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(201, 168, 76, 0.22);
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--color-bilhar-dark-2); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--color-bilhar-gold), var(--color-bilhar-green));
+  border-radius: 9999px;
+}
+
+/* ─── Gradient Text ─────────────────────── */
+.gradient-gold {
+  background: linear-gradient(135deg, #b8962e 0%, #f5d78a 45%, #c9a84c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Cards ─────────────────────────────── */
+.glass-card {
+  background: var(--color-bilhar-dark-2);
+  border: 1px solid rgba(201, 168, 76, 0.12);
+  border-radius: 0.75rem;
+}
+
+.luxury-card {
+  background: linear-gradient(160deg, #0f0f0f 0%, var(--color-bilhar-dark-2) 100%);
+  border: 1px solid rgba(201, 168, 76, 0.18);
+  border-top-color: rgba(201, 168, 76, 0.45);
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(201, 168, 76, 0.04) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* ─── Felt Texture ──────────────────────── */
+.felt-bg {
+  background-color: var(--color-bilhar-green);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 4px, rgba(0,0,0,0.04) 4px, rgba(0,0,0,0.04) 5px),
+    repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(0,0,0,0.04) 4px, rgba(0,0,0,0.04) 5px);
+}
+
+/* ─── Buttons ───────────────────────────── */
+.btn-gold {
+  background: linear-gradient(135deg, #b8962e 0%, #e8c96e 50%, #b8962e 100%);
+  background-size: 200% auto;
+  color: #050505;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 20px rgba(201, 168, 76, 0.18), inset 0 1px 0 rgba(255,255,255,0.12);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-gold:hover {
+  background-position: right center;
+  box-shadow: 0 6px 32px rgba(201, 168, 76, 0.38), inset 0 1px 0 rgba(255,255,255,0.18);
+  transform: translateY(-1px);
+}
+
+.btn-gold:active { transform: translateY(0); }
+
+.btn-outline-gold {
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  color: var(--color-bilhar-gold);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(201, 168, 76, 0.07);
+  border-color: rgba(201, 168, 76, 0.65);
+  box-shadow: 0 0 24px rgba(201, 168, 76, 0.1);
+}
+
+.btn-crimson {
+  background: transparent;
+  border: 1px solid rgba(130, 0, 0, 0.5);
+  color: var(--color-bilhar-green-bright);
+  font-weight: 600;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-crimson:hover {
+  background: rgba(130, 0, 0, 0.12);
+  border-color: var(--color-bilhar-green-light);
+}
+
+/* Legacy */
+.btn-green {
+  background: var(--color-bilhar-green);
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-green:hover { background: var(--color-bilhar-green-light); }
+
+/* ─── Typography ────────────────────────── */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4.5vw, 3.25rem);
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-bilhar-gold);
+  display: block;
+}
+
+/* ─── Decorative ────────────────────────── */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.5) 30%, rgba(201,168,76,0.5) 70%, transparent 100%);
+}
+
+.gold-rule-short {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-bilhar-gold), var(--color-bilhar-gold-light));
+}
+
+/* ─── Card Hover ────────────────────────── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,168,76,0.18);
+}
+
+/* ─── Price ─────────────────────────────── */
+.price-tag {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+/* ─── Text shadows ──────────────────────── */
+.text-shadow-gold {
+  text-shadow: 0 0 48px rgba(201, 168, 76, 0.25);
+}
+
+.text-shadow-red {
+  text-shadow: 0 0 32px rgba(239, 68, 68, 0.35);
+}
