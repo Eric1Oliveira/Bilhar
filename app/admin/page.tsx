@@ -4,7 +4,7 @@ import { TrendingUp, ShoppingCart, Package, Users, ArrowUpRight, Clock } from "l
 const STATS = [
   { label: "Receita do Mês", value: formatCurrency(48500), change: "+12.5%", icon: TrendingUp, color: "text-bilhar-green-bright", bg: "bg-bilhar-green/10" },
   { label: "Pedidos Ativos", value: "24", change: "+3", icon: ShoppingCart, color: "text-blue-400", bg: "bg-blue-500/10" },
-  { label: "Produtos", value: "12", change: "+1", icon: Package, color: "text-bilhar-gold", bg: "bg-bilhar-gold/10" },
+  { label: "Produtos", value: "12", change: "+1", icon: Package, color: "text-bilhar-green-bright", bg: "bg-bilhar-green/10" },
   { label: "Clientes", value: "342", change: "+18", icon: Users, color: "text-purple-400", bg: "bg-purple-500/10" },
 ];
 
@@ -63,7 +63,7 @@ export default function AdminDashboard() {
       <div className="glass-card overflow-hidden">
         <div className="p-6 border-b border-bilhar-green/20 flex items-center justify-between">
           <h2 className="font-semibold text-white flex items-center gap-2">
-            <Clock className="w-4 h-4 text-bilhar-gold" />
+            <Clock className="w-4 h-4 text-bilhar-green-bright" />
             Pedidos Recentes
           </h2>
           <a href="/admin/pedidos" className="text-sm text-bilhar-green-bright hover:text-white transition-colors">
@@ -84,7 +84,7 @@ export default function AdminDashboard() {
             <tbody>
               {RECENT_ORDERS.map((order) => (
                 <tr key={order.id} className="border-b border-bilhar-green/5 hover:bg-white/2 transition-colors">
-                  <td className="px-6 py-4 text-sm font-mono text-bilhar-gold">{order.id}</td>
+                  <td className="px-6 py-4 text-sm font-mono text-bilhar-green-bright">{order.id}</td>
                   <td className="px-6 py-4 text-sm text-white">{order.client}</td>
                   <td className="px-6 py-4 text-sm text-gray-400">{order.product}</td>
                   <td className="px-6 py-4 text-sm font-semibold text-white">

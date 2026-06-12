@@ -194,6 +194,64 @@ export default function PerfilPage() {
               </motion.div>
             )}
 
+            {activeTab === "galeria" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="space-y-4"
+              >
+                <div className="glass-card p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="font-semibold text-white text-lg">Galeria de Fotos</h3>
+                    <button className="text-xs px-3 py-1.5 rounded-lg btn-gold font-semibold flex items-center gap-1.5">
+                      <Image className="w-3.5 h-3.5" />
+                      Enviar Foto
+                    </button>
+                  </div>
+                  <p className="text-sm text-gray-400 mb-6">
+                    Compartilhe fotos da sua mesa. As melhores são publicadas na galeria pública da Sinuca Ideal.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {[
+                      { label: "Mesa do Escritório", approved: true },
+                      { label: "Sala de Jogos", approved: false },
+                    ].map((photo, i) => (
+                      <div
+                        key={i}
+                        className="relative rounded-xl overflow-hidden"
+                        style={{ aspectRatio: "1", background: "linear-gradient(160deg,#14141E,#0E0E1A)", border: "1px solid rgba(47,212,138,0.14)" }}
+                      >
+                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-3">
+                          <div className="text-3xl">🎱</div>
+                          <p className="text-xs text-gray-400 text-center leading-tight">{photo.label}</p>
+                          {photo.approved ? (
+                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-bilhar-green/20 text-bilhar-green-bright">Aprovada</span>
+                          ) : (
+                            <span className="text-[10px] px-2 py-0.5 rounded-full bg-yellow-500/20 text-yellow-300">Em análise</span>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                    <button
+                      className="rounded-xl flex flex-col items-center justify-center gap-2 transition-all"
+                      style={{ aspectRatio: "1", background: "transparent", border: "2px dashed rgba(47,212,138,0.2)" }}
+                    >
+                      <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "rgba(47,212,138,0.08)" }}>
+                        <Image style={{ width: 16, height: 16, color: "#2FD48A" }} />
+                      </div>
+                      <p className="text-xs text-gray-400">Nova foto</p>
+                    </button>
+                  </div>
+                </div>
+                <div className="glass-card p-5">
+                  <p className="text-sm text-gray-400">
+                    <span className="font-semibold" style={{ color: "#2FD48A" }}>Dica:</span>{" "}
+                    Fotos aprovadas ganham destaque na página inicial e nas redes sociais. Envie fotos com boa iluminação para maior chance de aprovação.
+                  </p>
+                </div>
+              </motion.div>
+            )}
+
             {activeTab === "conta" && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -211,7 +269,7 @@ export default function PerfilPage() {
                     <input
                       defaultValue={field.value}
                       type={field.type}
-                      className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white focus:border-bilhar-gold focus:outline-none"
+                      className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white focus:border-bilhar-green/50 focus:outline-none"
                     />
                   </div>
                 ))}

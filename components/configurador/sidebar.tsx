@@ -72,7 +72,7 @@ export function ConfiguratorSidebar() {
     <div className="flex flex-col h-full overflow-hidden">
 
       {/* ── Price header ── */}
-      <div className="flex-shrink-0 px-4 sm:px-5 py-4 border-b border-bilhar-gold/10 bg-bilhar-dark/40">
+      <div className="flex-shrink-0 px-4 sm:px-5 py-4 border-b border-bilhar-green/10 bg-bilhar-dark/40">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <p className="text-[0.6rem] font-bold tracking-[0.15em] uppercase text-gray-500 mb-0.5">
@@ -94,7 +94,7 @@ export function ConfiguratorSidebar() {
           <div className="flex items-center gap-2 flex-shrink-0">
             <Link
               href="/ar"
-              className="flex items-center gap-1.5 text-[0.6rem] font-bold tracking-wider uppercase text-bilhar-gold border border-bilhar-gold/25 rounded-lg px-2.5 py-1.5 hover:bg-bilhar-gold/8 transition-all"
+              className="flex items-center gap-1.5 text-[0.6rem] font-bold tracking-wider uppercase text-bilhar-green-bright border border-bilhar-green/25 rounded-lg px-2.5 py-1.5 hover:bg-bilhar-green/8 transition-all"
             >
               <Eye className="w-3 h-3" />
               Ver AR
@@ -140,16 +140,16 @@ export function ConfiguratorSidebar() {
                       onClick={() => setProduct(model)}
                       className={`w-full text-left p-4 rounded-2xl border-2 transition-all duration-200 ${
                         isSelected
-                          ? "border-bilhar-gold bg-bilhar-gold/8"
-                          : "border-bilhar-gold/10 hover:border-bilhar-gold/30 bg-bilhar-dark/40 hover:bg-bilhar-dark/60"
+                          ? "border-bilhar-green bg-bilhar-green/8"
+                          : "border-bilhar-green/10 hover:border-bilhar-green/30 bg-bilhar-dark/40 hover:bg-bilhar-dark/60"
                       }`}
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-0.5">
                             {isSelected && (
-                              <span className="w-4 h-4 rounded-full bg-bilhar-gold flex items-center justify-center flex-shrink-0">
-                                <Check className="w-2.5 h-2.5 text-bilhar-dark" strokeWidth={3} />
+                              <span className="w-4 h-4 rounded-full bg-bilhar-green flex items-center justify-center flex-shrink-0">
+                                <Check className="w-2.5 h-2.5 text-white" strokeWidth={3} />
                               </span>
                             )}
                             <p className="font-semibold text-white text-sm leading-tight">{model.name}</p>
@@ -158,7 +158,7 @@ export function ConfiguratorSidebar() {
                           <div className="flex flex-wrap gap-1.5 mt-2">
                             {model.features.slice(0, 3).map((f) => (
                               <span key={f} className="text-[0.6rem] px-2 py-0.5 rounded-full font-medium"
-                                style={{ background: "rgba(201,168,76,0.08)", border: "1px solid rgba(201,168,76,0.15)", color: "rgba(201,168,76,0.75)" }}>
+                                style={{ background: "rgba(47,212,138,0.08)", border: "1px solid rgba(47,212,138,0.15)", color: "rgba(47,212,138,0.75)" }}>
                                 {f}
                               </span>
                             ))}
@@ -218,13 +218,13 @@ export function ConfiguratorSidebar() {
                       onClick={() => toggleAccessory(acc.id)}
                       className={`w-full text-left p-4 rounded-2xl border-2 transition-all duration-200 flex items-center gap-3 ${
                         isSelected
-                          ? "border-bilhar-gold bg-bilhar-gold/8"
-                          : "border-bilhar-gold/10 hover:border-bilhar-gold/25 bg-bilhar-dark/40"
+                          ? "border-bilhar-green bg-bilhar-green/8"
+                          : "border-bilhar-green/10 hover:border-bilhar-green/25 bg-bilhar-dark/40"
                       }`}
                     >
                       {/* Checkbox */}
                       <div className={`w-5 h-5 rounded-md border-2 flex items-center justify-center flex-shrink-0 transition-all ${
-                        isSelected ? "bg-bilhar-gold border-bilhar-gold" : "border-gray-600"
+                        isSelected ? "bg-bilhar-green border-bilhar-green" : "border-gray-600"
                       }`}>
                         {isSelected && <Check className="w-3 h-3 text-bilhar-dark" strokeWidth={3} />}
                       </div>
@@ -232,7 +232,7 @@ export function ConfiguratorSidebar() {
                         <p className="text-sm text-white font-semibold leading-tight">{acc.label}</p>
                         <p className="text-xs text-gray-500 mt-0.5">{acc.desc}</p>
                       </div>
-                      <span className={`text-sm font-bold flex-shrink-0 ${isSelected ? "text-bilhar-gold" : "text-gray-400"}`}>
+                      <span className={`text-sm font-bold flex-shrink-0 ${isSelected ? "text-bilhar-green-bright" : "text-gray-400"}`}>
                         +{formatCurrency(acc.price)}
                       </span>
                     </button>
@@ -256,7 +256,7 @@ export function ConfiguratorSidebar() {
                     <input
                       type="number"
                       defaultValue={field.default}
-                      className="w-full bg-bilhar-dark border-2 border-bilhar-gold/15 focus:border-bilhar-gold/50 rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors placeholder-gray-600"
+                      className="w-full bg-bilhar-dark border-2 border-bilhar-green/15 focus:border-bilhar-green/50 rounded-xl px-4 py-3 text-white text-sm outline-none transition-colors placeholder-gray-600"
                     />
                   </div>
                 ))}
@@ -271,14 +271,14 @@ export function ConfiguratorSidebar() {
       </div>
 
       {/* ── Navigation footer ── */}
-      <div className="flex-shrink-0 px-4 sm:px-5 py-4 border-t border-bilhar-gold/10 bg-bilhar-dark/40">
+      <div className="flex-shrink-0 px-4 sm:px-5 py-4 border-t border-bilhar-green/10 bg-bilhar-dark/40">
         {currentStep === 5 ? (
           <div className="space-y-2.5">
             <button className="w-full flex items-center justify-center gap-2.5 btn-gold py-3.5 rounded-xl text-sm font-bold">
               <ShoppingCart className="w-4 h-4" />
               Adicionar ao Carrinho
             </button>
-            <button className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold border border-bilhar-gold/20 text-bilhar-gold hover:bg-bilhar-gold/5 transition-all">
+            <button className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold border border-bilhar-green/20 text-bilhar-green-bright hover:bg-bilhar-green/5 transition-all">
               <Save className="w-4 h-4" />
               Salvar Configuração
             </button>
@@ -288,7 +288,7 @@ export function ConfiguratorSidebar() {
             {currentStep > 0 && (
               <button
                 onClick={prevStep}
-                className="flex items-center gap-1.5 px-5 py-3.5 rounded-xl text-sm font-semibold border border-bilhar-gold/15 text-gray-300 hover:bg-white/5 hover:border-bilhar-gold/30 transition-all"
+                className="flex items-center gap-1.5 px-5 py-3.5 rounded-xl text-sm font-semibold border border-bilhar-green/15 text-gray-300 hover:bg-white/5 hover:border-bilhar-green/30 transition-all"
               >
                 <ChevronLeft className="w-4 h-4" />
                 Voltar

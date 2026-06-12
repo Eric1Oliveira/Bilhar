@@ -96,7 +96,7 @@ function SceneLoader() {
   return (
     <div className="w-full h-full flex items-center justify-center bg-bilhar-dark">
       <div className="text-center space-y-4">
-        <div className="w-12 h-12 rounded-full border-2 border-bilhar-gold/20 border-t-bilhar-gold animate-spin mx-auto" />
+        <div className="w-12 h-12 rounded-full border-2 border-bilhar-green/20 border-t-bilhar-green-bright animate-spin mx-auto" />
         <p className="text-gray-500 text-xs tracking-widest uppercase">Carregando 3D...</p>
       </div>
     </div>
@@ -112,12 +112,12 @@ export function ConfiguradorPageClient() {
       <Navbar />
 
       {/* ── Top bar: title + steps + price ── */}
-      <div className="pt-16 md:pt-20 flex-shrink-0 bg-bilhar-dark-2 border-b border-bilhar-gold/10">
+      <div className="pt-16 md:pt-20 flex-shrink-0 bg-bilhar-dark-2 border-b border-bilhar-green/10">
         <div className="flex items-center justify-between px-4 sm:px-6 py-3 gap-3">
           {/* Left: brand */}
           <div className="flex items-center gap-2 flex-shrink-0">
-            <Sparkles className="w-4 h-4 text-bilhar-gold hidden sm:block" />
-            <span className="text-xs font-bold tracking-widest uppercase text-bilhar-gold hidden sm:block">
+            <Sparkles className="w-4 h-4 text-bilhar-green-bright hidden sm:block" />
+            <span className="text-xs font-bold tracking-widest uppercase text-bilhar-green-bright hidden sm:block">
               Configurador 3D
             </span>
           </div>
@@ -141,7 +141,7 @@ export function ConfiguradorPageClient() {
             </AnimatePresence>
             <Link
               href="/ar"
-              className="hidden sm:flex items-center gap-1.5 text-[0.65rem] font-bold tracking-wider uppercase text-bilhar-gold border border-bilhar-gold/25 rounded-lg px-2.5 py-1.5 hover:bg-bilhar-gold/8 transition-all"
+              className="hidden sm:flex items-center gap-1.5 text-[0.65rem] font-bold tracking-wider uppercase text-bilhar-green-bright border border-bilhar-green/25 rounded-lg px-2.5 py-1.5 hover:bg-bilhar-green/8 transition-all"
             >
               <Eye className="w-3 h-3" />
               AR
@@ -175,8 +175,8 @@ export function ConfiguradorPageClient() {
               title="Auto-rotacionar"
               className={`p-2.5 rounded-xl border text-sm transition-all backdrop-blur-sm ${
                 autoRotate
-                  ? "bg-bilhar-gold/20 border-bilhar-gold/50 text-bilhar-gold"
-                  : "bg-bilhar-dark/70 border-bilhar-gold/15 text-gray-500 hover:text-gray-300"
+                  ? "bg-bilhar-green/20 border-bilhar-green/50 text-bilhar-green-bright"
+                  : "bg-bilhar-dark/70 border-bilhar-green/15 text-gray-500 hover:text-gray-300"
               }`}
             >
               <RotateCcw className="w-4 h-4" />
@@ -184,7 +184,7 @@ export function ConfiguradorPageClient() {
             <button
               onClick={reset}
               title="Reiniciar"
-              className="p-2.5 rounded-xl border bg-bilhar-dark/70 border-bilhar-gold/15 text-gray-500 hover:text-gray-300 transition-all backdrop-blur-sm"
+              className="p-2.5 rounded-xl border bg-bilhar-dark/70 border-bilhar-green/15 text-gray-500 hover:text-gray-300 transition-all backdrop-blur-sm"
             >
               <RefreshCw className="w-4 h-4" />
             </button>
@@ -206,7 +206,7 @@ export function ConfiguradorPageClient() {
         </div>
 
         {/* ── Sidebar ── */}
-        <div className="flex-1 lg:flex-none lg:w-96 xl:w-[420px] bg-bilhar-dark-2 border-t lg:border-t-0 lg:border-l border-bilhar-gold/10 flex flex-col min-h-0 overflow-hidden">
+        <div className="flex-1 lg:flex-none lg:w-96 xl:w-[420px] bg-bilhar-dark-2 border-t lg:border-t-0 lg:border-l border-bilhar-green/10 flex flex-col min-h-0 overflow-hidden">
           <ConfiguratorSidebar />
         </div>
 

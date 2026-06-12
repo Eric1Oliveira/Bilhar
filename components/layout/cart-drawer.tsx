@@ -38,7 +38,7 @@ export function CartDrawer() {
                 <ShoppingCart className="w-5 h-5 text-bilhar-green-light" />
                 <h2 className="font-display font-bold text-xl text-white">Seu Carrinho</h2>
                 {items.length > 0 && (
-                  <span className="w-6 h-6 rounded-full bg-bilhar-gold text-bilhar-dark text-xs font-bold flex items-center justify-center">
+                  <span className="w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center" style={{ background: "#1A7A52", color: "#fff" }}>
                     {items.length}
                   </span>
                 )}
@@ -101,7 +101,7 @@ export function CartDrawer() {
                           )}
                           <div className="mt-1">
                             {item.type === "aluguel" ? (
-                              <p className="text-xs text-bilhar-gold">
+                              <p className="text-xs" style={{ color: "#2FD48A" }}>
                                 Aluguel {item.rental_months} meses • {formatCurrency(
                                   item.rental_months === 6
                                     ? item.product.rental_price_6
@@ -111,7 +111,7 @@ export function CartDrawer() {
                                 )}/mês
                               </p>
                             ) : (
-                              <p className="text-bilhar-gold font-semibold text-sm">
+                              <p className="font-semibold text-sm" style={{ color: "#2FD48A" }}>
                                 {formatCurrency(item.configuration?.total_price ?? item.product.base_price)}
                               </p>
                             )}

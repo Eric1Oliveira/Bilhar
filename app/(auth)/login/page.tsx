@@ -27,8 +27,8 @@ function AuthPanel() {
     <div className="hidden lg:flex flex-col relative overflow-hidden bg-bilhar-dark w-[45%] flex-shrink-0">
       {/* Atmosphere */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(130,0,0,0.18)_0%,transparent_60%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(201,168,76,0.1)_0%,transparent_60%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(26,122,82,0.18)_0%,transparent_60%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(47,212,138,0.07)_0%,transparent_60%)]" />
         {/* Fine grid */}
         <div className="absolute inset-0 opacity-[0.025]" style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)",
@@ -36,10 +36,10 @@ function AuthPanel() {
         }} />
       </div>
 
-      {/* Gold top rule */}
-      <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-bilhar-gold/40 to-transparent" />
-      {/* Gold right rule */}
-      <div className="absolute right-0 inset-y-0 w-px bg-gradient-to-b from-transparent via-bilhar-gold/20 to-transparent" />
+      {/* Emerald top rule */}
+      <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-bilhar-green/40 to-transparent" />
+      {/* Emerald right rule */}
+      <div className="absolute right-0 inset-y-0 w-px bg-gradient-to-b from-transparent via-bilhar-green/20 to-transparent" />
 
       <div className="relative z-10 flex flex-col h-full px-12 py-14">
         {/* Logo */}
@@ -65,7 +65,7 @@ function AuthPanel() {
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.02em" }}
             >
               Configure sua mesa<br />
-              <span className="gradient-gold">perfeita em 3D</span>
+              <span className="gradient-emerald">perfeita em 3D</span>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-10">
               Acesse sua conta para salvar configurações, acompanhar pedidos e visualizar sua mesa em realidade aumentada.
@@ -81,8 +81,8 @@ function AuthPanel() {
           >
             {TRUST.map((item, i) => (
               <div key={i} className="flex items-center gap-3">
-                <div className="w-5 h-5 rounded-full bg-bilhar-gold/15 border border-bilhar-gold/30 flex items-center justify-center flex-shrink-0">
-                  <Check className="w-2.5 h-2.5 text-bilhar-gold" strokeWidth={3} />
+                <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: "rgba(47,212,138,0.12)", border: "1px solid rgba(47,212,138,0.3)" }}>
+                  <Check style={{ width: 10, height: 10, color: "#2FD48A" }} strokeWidth={3} />
                 </div>
                 <span className="text-sm text-gray-300">{item}</span>
               </div>
@@ -98,8 +98,8 @@ function AuthPanel() {
           className="mt-auto"
         >
           <div className="relative w-full max-w-xs mx-auto" style={{ aspectRatio: "2/1" }}>
-            <div className="absolute inset-0 rounded-xl blur-lg opacity-20 scale-95" style={{ background: "#820000" }} />
-            <div className="absolute inset-0 rounded-xl overflow-hidden" style={{ background: "#820000" }}>
+            <div className="absolute inset-0 rounded-xl blur-lg opacity-20 scale-95" style={{ background: "#156845" }} />
+            <div className="absolute inset-0 rounded-xl overflow-hidden" style={{ background: "#156845" }}>
               <div className="absolute inset-0" style={{
                 backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 4px,rgba(0,0,0,0.04) 4px,rgba(0,0,0,0.04) 5px), repeating-linear-gradient(90deg,transparent,transparent 4px,rgba(0,0,0,0.04) 4px,rgba(0,0,0,0.04) 5px)"
               }} />
@@ -112,7 +112,7 @@ function AuthPanel() {
             </div>
           </div>
           <p className="text-[0.6rem] text-center text-gray-600 tracking-widest uppercase mt-3">
-            Mesa Pro 9 · Feltro Vermelho · Mogno
+            Mesa Pro 9 · Feltro Verde · Nogueira
           </p>
         </motion.div>
       </div>
@@ -133,13 +133,13 @@ function Field({
     <div>
       <label className="text-xs font-semibold text-gray-400 tracking-wide mb-2 block">{label}</label>
       <div className="relative group">
-        <Icon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-gold transition-colors pointer-events-none" />
+        <Icon className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-green-bright transition-colors pointer-events-none" />
         <input
           {...props}
           className={`w-full bg-bilhar-dark border-2 rounded-xl pl-11 ${right ? "pr-12" : "pr-4"} py-3.5 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-200
             ${error
               ? "border-red-500/60 focus:border-red-500"
-              : "border-bilhar-gold/12 focus:border-bilhar-gold/50 hover:border-bilhar-gold/20"
+              : "border-bilhar-green/15 focus:border-bilhar-green/50 hover:border-bilhar-green/25"
             }`}
         />
         {right && (
@@ -219,7 +219,7 @@ export default function LoginPage() {
       <div className="flex-1 flex flex-col items-center justify-center p-6 sm:p-10 relative overflow-y-auto">
         {/* Mobile background */}
         <div className="lg:hidden absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(130,0,0,0.12)_0%,transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(26,122,82,0.12)_0%,transparent_60%)]" />
           <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-bilhar-dark to-transparent" />
         </div>
 
@@ -265,7 +265,7 @@ export default function LoginPage() {
               </p>
               <button
                 onClick={() => setMagicLinkSent(false)}
-                className="text-sm text-bilhar-gold hover:text-bilhar-gold-light transition-colors"
+                className="text-sm text-bilhar-green-bright hover:text-white transition-colors"
               >
                 ← Tentar com senha
               </button>
@@ -276,7 +276,7 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={handleGoogle}
-                className="w-full flex items-center justify-center gap-3 border-2 border-bilhar-gold/15 hover:border-bilhar-gold/35 rounded-xl py-3.5 text-sm text-gray-300 hover:text-white transition-all duration-200 hover:bg-bilhar-gold/4"
+                className="w-full flex items-center justify-center gap-3 border-2 border-bilhar-green/15 hover:border-bilhar-green/35 rounded-xl py-3.5 text-sm text-gray-300 hover:text-white transition-all duration-200 hover:bg-bilhar-green/5"
               >
                 <Globe className="w-4 h-4 flex-shrink-0" />
                 Continuar com Google
@@ -284,9 +284,9 @@ export default function LoginPage() {
 
               {/* Divider */}
               <div className="flex items-center gap-3">
-                <div className="flex-1 h-px bg-bilhar-gold/10" />
+                <div className="flex-1 h-px bg-bilhar-green/10" />
                 <span className="text-[0.65rem] font-bold tracking-widest uppercase text-gray-600">ou com e-mail</span>
-                <div className="flex-1 h-px bg-bilhar-gold/10" />
+                <div className="flex-1 h-px bg-bilhar-green/10" />
               </div>
 
               {/* Auth error */}
@@ -316,12 +316,12 @@ export default function LoginPage() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <label className="text-xs font-semibold text-gray-400 tracking-wide">Senha</label>
-                    <a href="#" className="text-[0.65rem] text-bilhar-gold hover:text-bilhar-gold-light transition-colors">
+                    <a href="#" className="text-[0.65rem] text-bilhar-green-bright hover:text-white transition-colors">
                       Esqueci a senha
                     </a>
                   </div>
                   <div className="relative group">
-                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-gold transition-colors pointer-events-none" />
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-green-bright transition-colors pointer-events-none" />
                     <input
                       {...register("password")}
                       type={showPassword ? "text" : "password"}
@@ -330,7 +330,7 @@ export default function LoginPage() {
                       className={`w-full bg-bilhar-dark border-2 rounded-xl pl-11 pr-12 py-3.5 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-200
                         ${errors.password
                           ? "border-red-500/60 focus:border-red-500"
-                          : "border-bilhar-gold/12 focus:border-bilhar-gold/50 hover:border-bilhar-gold/20"
+                          : "border-bilhar-green/15 focus:border-bilhar-green/50 hover:border-bilhar-green/25"
                         }`}
                     />
                     <button
@@ -371,7 +371,7 @@ export default function LoginPage() {
               {/* Magic link */}
               <button
                 onClick={handleMagicLink}
-                className="w-full flex items-center justify-center gap-2 text-sm text-gray-500 hover:text-bilhar-gold transition-colors py-1"
+                className="w-full flex items-center justify-center gap-2 text-sm text-gray-500 hover:text-bilhar-green-bright transition-colors py-1"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 Entrar com link mágico (sem senha)
@@ -381,7 +381,7 @@ export default function LoginPage() {
 
           <p className="text-center text-sm text-gray-500 mt-8">
             Não tem conta?{" "}
-            <Link href="/registro" className="text-bilhar-gold hover:text-bilhar-gold-light transition-colors font-semibold">
+            <Link href="/registro" className="text-bilhar-green-bright hover:text-white transition-colors font-semibold">
               Criar conta grátis
             </Link>
           </p>

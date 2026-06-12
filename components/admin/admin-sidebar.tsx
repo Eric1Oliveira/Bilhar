@@ -31,7 +31,7 @@ export function AdminSidebar() {
           </div>
           <div>
             <span className="font-display font-bold text-white text-sm">Sinuca</span>
-            <span className="font-display font-bold gradient-gold text-sm ml-1">Ideal</span>
+            <span className="font-display font-bold gradient-emerald text-sm ml-1">Ideal</span>
             <p className="text-[10px] text-gray-500">Admin Panel</p>
           </div>
         </Link>

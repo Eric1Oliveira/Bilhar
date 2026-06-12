@@ -31,8 +31,8 @@ export function ColorPicker({ options, selected, onSelect, felt }: ColorPickerPr
             className={cn(
               "relative flex flex-col items-center gap-2.5 p-3.5 rounded-2xl border-2 transition-all duration-200 text-left group",
               isSelected
-                ? "border-bilhar-gold bg-bilhar-gold/8 shadow-[0_0_16px_rgba(201,168,76,0.12)]"
-                : "border-bilhar-gold/10 hover:border-bilhar-gold/30 bg-bilhar-dark/50 hover:bg-bilhar-dark/70"
+                ? "border-bilhar-green bg-bilhar-green/8 shadow-[0_0_16px_rgba(26,122,82,0.15)]"
+                : "border-bilhar-green/10 hover:border-bilhar-green/30 bg-bilhar-dark/50 hover:bg-bilhar-dark/70"
             )}
           >
             {/* Swatch */}
@@ -53,8 +53,8 @@ export function ColorPicker({ options, selected, onSelect, felt }: ColorPickerPr
                   animate={{ opacity: 1 }}
                   className="absolute inset-0 flex items-center justify-center bg-black/25"
                 >
-                  <div className="w-6 h-6 rounded-full bg-bilhar-gold flex items-center justify-center shadow-lg">
-                    <Check className="w-3.5 h-3.5 text-bilhar-dark" strokeWidth={3} />
+                  <div className="w-6 h-6 rounded-full bg-bilhar-green flex items-center justify-center shadow-lg">
+                    <Check className="w-3.5 h-3.5 text-white" strokeWidth={3} />
                   </div>
                 </motion.div>
               )}
@@ -71,7 +71,7 @@ export function ColorPicker({ options, selected, onSelect, felt }: ColorPickerPr
               {option.priceModifier !== undefined && option.priceModifier > 0 && (
                 <p className={cn(
                   "text-[0.6rem] mt-0.5 font-medium transition-colors",
-                  isSelected ? "text-bilhar-gold" : "text-gray-600"
+                  isSelected ? "text-bilhar-green-bright" : "text-gray-600"
                 )}>
                   +R$ {option.priceModifier}
                 </p>

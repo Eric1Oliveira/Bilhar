@@ -108,7 +108,7 @@ export function CatalogoClient() {
       <div className="bg-bilhar-dark-2/50 border-b border-bilhar-green/20 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-display font-bold text-4xl text-white mb-3">
-            Catálogo de <span className="gradient-gold">Mesas</span>
+            Catálogo de <span className="gradient-emerald">Mesas</span>
           </h1>
           <p className="text-gray-400">
             {filtered.length} produtos encontrados
@@ -183,7 +183,7 @@ export function CatalogoClient() {
                 </div>
                 {product.is_featured && (
                   <div className="absolute top-3 left-3">
-                    <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-bilhar-gold text-bilhar-dark">
+                    <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: "rgba(47,212,138,0.18)", color: "#2FD48A" }}>
                       Destaque
                     </span>
                   </div>
@@ -191,7 +191,7 @@ export function CatalogoClient() {
                 <div className="absolute inset-0 bg-gradient-to-t from-bilhar-dark-2 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4 gap-2">
                   <Link
                     href={`/configurador?produto=${product.id}`}
-                    className="flex items-center gap-1.5 bg-bilhar-gold text-bilhar-dark text-xs font-semibold px-4 py-2 rounded-lg"
+                    className="btn-gold flex items-center gap-1.5 text-xs px-4 py-2 rounded-lg"
                   >
                     <Sparkles className="w-3.5 h-3.5" />
                     Configurar

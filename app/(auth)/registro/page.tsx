@@ -32,16 +32,16 @@ function AuthPanel() {
     <div className="hidden lg:flex flex-col relative overflow-hidden bg-bilhar-dark w-[45%] flex-shrink-0">
       {/* Atmosphere */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(130,0,0,0.18)_0%,transparent_60%)]" />
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(201,168,76,0.1)_0%,transparent_60%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,rgba(26,122,82,0.18)_0%,transparent_60%)]" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(47,212,138,0.07)_0%,transparent_60%)]" />
         <div className="absolute inset-0 opacity-[0.025]" style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }} />
       </div>
 
-      <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-bilhar-gold/40 to-transparent" />
-      <div className="absolute right-0 inset-y-0 w-px bg-gradient-to-b from-transparent via-bilhar-gold/20 to-transparent" />
+      <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-bilhar-green/40 to-transparent" />
+      <div className="absolute right-0 inset-y-0 w-px bg-gradient-to-b from-transparent via-bilhar-green/20 to-transparent" />
 
       <div className="relative z-10 flex flex-col h-full px-12 py-14">
         {/* Logo */}
@@ -51,7 +51,7 @@ function AuthPanel() {
           </div>
           <div>
             <span className="font-display font-bold text-xl text-white">Sinuca</span>
-            <span className="font-display font-bold text-xl gradient-gold ml-1">Ideal</span>
+            <span className="font-display font-bold text-xl gradient-emerald ml-1">Ideal</span>
           </div>
         </Link>
 
@@ -67,7 +67,7 @@ function AuthPanel() {
               style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)", letterSpacing: "-0.02em" }}
             >
               Comece a configurar<br />
-              <span className="gradient-gold">sua mesa hoje</span>
+              <span className="gradient-emerald">sua mesa hoje</span>
             </h2>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-10">
               Crie sua conta gratuitamente e acesse todas as ferramentas exclusivas da maior plataforma de bilhar do Brasil.
@@ -83,8 +83,8 @@ function AuthPanel() {
           >
             {PERKS.map(({ icon: Icon, label }, i) => (
               <div key={i} className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-bilhar-gold/8 border border-bilhar-gold/15 flex items-center justify-center flex-shrink-0">
-                  <Icon className="w-3.5 h-3.5 text-bilhar-gold" />
+                <div className="w-8 h-8 rounded-lg border" style={{ background: "rgba(47,212,138,0.08)", borderColor: "rgba(47,212,138,0.2)" }} flex items-center justify-center flex-shrink-0">
+                  <Icon style={{ width: 14, height: 14, color: "#2FD48A" }} />
                 </div>
                 <span className="text-sm text-gray-300">{label}</span>
               </div>
@@ -101,7 +101,7 @@ function AuthPanel() {
         >
           {[{ v: "500+", l: "Mesas entregues" }, { v: "4.9★", l: "Avaliação" }, { v: "100%", l: "Gratuito" }].map((s, i) => (
             <div key={i}>
-              <div className="font-display font-bold text-lg gradient-gold leading-none">{s.v}</div>
+              <div className="font-display font-bold text-lg gradient-emerald leading-none">{s.v}</div>
               <div className="text-xs text-gray-600 mt-1">{s.l}</div>
             </div>
           ))}
@@ -185,7 +185,7 @@ export default function RegistroPage() {
     `w-full bg-bilhar-dark border-2 rounded-xl pl-11 pr-4 py-3.5 text-sm text-white placeholder:text-gray-600 outline-none transition-all duration-200 ${
       hasError
         ? "border-red-500/60 focus:border-red-500"
-        : "border-bilhar-gold/12 focus:border-bilhar-gold/50 hover:border-bilhar-gold/20"
+        : "border-bilhar-green/15 focus:border-bilhar-green/50 hover:border-bilhar-green/25"
     }`;
 
   return (
@@ -196,7 +196,7 @@ export default function RegistroPage() {
       <div className="flex-1 flex flex-col items-center justify-center p-6 sm:p-10 relative overflow-y-auto">
         {/* Mobile background */}
         <div className="lg:hidden absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(130,0,0,0.12)_0%,transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(26,122,82,0.12)_0%,transparent_60%)]" />
         </div>
 
         <motion.div
@@ -213,7 +213,7 @@ export default function RegistroPage() {
               </div>
               <div>
                 <span className="font-display font-bold text-xl text-white">Sinuca</span>
-                <span className="font-display font-bold text-xl gradient-gold ml-1">Ideal</span>
+                <span className="font-display font-bold text-xl gradient-emerald ml-1">Ideal</span>
               </div>
             </Link>
           </div>
@@ -232,8 +232,8 @@ export default function RegistroPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="luxury-card p-8 text-center"
             >
-              <div className="w-14 h-14 rounded-full bg-bilhar-gold/15 border border-bilhar-gold/30 flex items-center justify-center mx-auto mb-5">
-                <Sparkles className="w-6 h-6 text-bilhar-gold" />
+              <div className="w-14 h-14 rounded-full border" style={{ background: "rgba(47,212,138,0.12)", borderColor: "rgba(47,212,138,0.3)" }} flex items-center justify-center mx-auto mb-5">
+                <Sparkles style={{ width: 24, height: 24, color: "#2FD48A" }} />
               </div>
               <h3 className="font-display font-bold text-white text-xl mb-2">Conta criada!</h3>
               <p className="text-sm text-gray-400 leading-relaxed mb-6">
@@ -250,7 +250,7 @@ export default function RegistroPage() {
               <button
                 type="button"
                 onClick={handleGoogle}
-                className="w-full flex items-center justify-center gap-3 border-2 border-bilhar-gold/15 hover:border-bilhar-gold/35 rounded-xl py-3.5 text-sm text-gray-300 hover:text-white transition-all duration-200 hover:bg-bilhar-gold/4"
+                className="w-full flex items-center justify-center gap-3 border-2 border-bilhar-green/15 hover:border-bilhar-green/35 rounded-xl py-3.5 text-sm text-gray-300 hover:text-white transition-all duration-200 hover:bg-bilhar-green/5"
               >
                 <Globe className="w-4 h-4 flex-shrink-0" />
                 Cadastrar com Google
@@ -270,9 +270,9 @@ export default function RegistroPage() {
 
               {/* Divider */}
               <div className="flex items-center gap-3">
-                <div className="flex-1 h-px bg-bilhar-gold/10" />
+                <div className="flex-1 h-px bg-bilhar-green/10" />
                 <span className="text-[0.65rem] font-bold tracking-widest uppercase text-gray-600">ou preencha</span>
-                <div className="flex-1 h-px bg-bilhar-gold/10" />
+                <div className="flex-1 h-px bg-bilhar-green/10" />
               </div>
 
               {/* Form */}
@@ -281,7 +281,7 @@ export default function RegistroPage() {
                 <div>
                   <label className="text-xs font-semibold text-gray-400 tracking-wide mb-2 block">Nome Completo</label>
                   <div className="relative group">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-gold transition-colors pointer-events-none" />
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-green-bright transition-colors pointer-events-none" />
                     <input {...register("full_name")} type="text" placeholder="Seu nome completo" autoComplete="name"
                       className={inputCls(!!errors.full_name)} />
                   </div>
@@ -292,7 +292,7 @@ export default function RegistroPage() {
                 <div>
                   <label className="text-xs font-semibold text-gray-400 tracking-wide mb-2 block">E-mail</label>
                   <div className="relative group">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-gold transition-colors pointer-events-none" />
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-green-bright transition-colors pointer-events-none" />
                     <input {...register("email")} type="email" placeholder="seu@email.com" autoComplete="email"
                       className={inputCls(!!errors.email)} />
                   </div>
@@ -303,7 +303,7 @@ export default function RegistroPage() {
                 <div>
                   <label className="text-xs font-semibold text-gray-400 tracking-wide mb-2 block">Senha</label>
                   <div className="relative group">
-                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-gold transition-colors pointer-events-none" />
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-green-bright transition-colors pointer-events-none" />
                     <input {...register("password")} type={showPassword ? "text" : "password"}
                       placeholder="Mínimo 8 caracteres" autoComplete="new-password"
                       className={`${inputCls(!!errors.password)} pr-12`} />
@@ -320,7 +320,7 @@ export default function RegistroPage() {
                 <div>
                   <label className="text-xs font-semibold text-gray-400 tracking-wide mb-2 block">Confirmar Senha</label>
                   <div className="relative group">
-                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-gold transition-colors pointer-events-none" />
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 group-focus-within:text-bilhar-green-bright transition-colors pointer-events-none" />
                     <input {...register("confirm_password")} type={showPassword ? "text" : "password"}
                       placeholder="Repita a senha" autoComplete="new-password"
                       className={`${inputCls(!!errors.confirm_password)} pr-12`} />
@@ -331,9 +331,9 @@ export default function RegistroPage() {
                 {/* Terms */}
                 <p className="text-[0.65rem] text-gray-600 leading-relaxed pt-1">
                   Ao criar conta, você concorda com os{" "}
-                  <a href="/termos" className="text-bilhar-gold hover:text-bilhar-gold-light transition-colors">Termos de Uso</a>
+                  <a href="/termos" className="text-bilhar-green-bright hover:text-white transition-colors">Termos de Uso</a>
                   {" "}e a{" "}
-                  <a href="/privacidade" className="text-bilhar-gold hover:text-bilhar-gold-light transition-colors">Política de Privacidade</a>.
+                  <a href="/privacidade" className="text-bilhar-green-bright hover:text-white transition-colors">Política de Privacidade</a>.
                 </p>
 
                 <button
@@ -359,7 +359,7 @@ export default function RegistroPage() {
 
           <p className="text-center text-sm text-gray-500 mt-7">
             Já tem conta?{" "}
-            <Link href="/login" className="text-bilhar-gold hover:text-bilhar-gold-light transition-colors font-semibold">
+            <Link href="/login" className="text-bilhar-green-bright hover:text-white transition-colors font-semibold">
               Entrar
             </Link>
           </p>

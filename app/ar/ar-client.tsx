@@ -78,7 +78,7 @@ export function ARPageClient() {
               </Link>
               <div className="w-px h-6 bg-bilhar-green/20 hidden sm:block" />
               <h1 className="font-display font-bold text-white text-lg">
-                Visualizar em <span className="gradient-gold">AR</span>
+                Visualizar em <span className="gradient-emerald">AR</span>
               </h1>
             </div>
             <button
@@ -126,7 +126,7 @@ export function ARPageClient() {
                   onClick={() => {
                     modelRef.current?.activateAR?.();
                   }}
-                  className="flex items-center gap-3 bg-bilhar-gold hover:bg-bilhar-gold-light text-bilhar-dark font-semibold px-8 py-4 rounded-xl shadow-xl shadow-bilhar-gold/30 transition-all text-base"
+                  className="flex items-center gap-3 bg-bilhar-green hover:bg-bilhar-green-bright text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-bilhar-green/30 transition-all text-base"
                 >
                   <Camera className="w-5 h-5" />
                   Ver no meu Ambiente (AR)
@@ -156,7 +156,7 @@ export function ARPageClient() {
             {/* Configuration Summary */}
             <div className="glass-card p-6">
               <h3 className="font-semibold text-white mb-4 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-bilhar-gold" />
+                <Sparkles className="w-4 h-4 text-bilhar-green-bright" />
                 Sua Configuração
               </h3>
               <div className="space-y-3">
@@ -202,10 +202,10 @@ export function ARPageClient() {
             <div className="glass-card p-5 border border-bilhar-green/20">
               <h4 className="text-sm font-semibold text-white mb-3">Como usar o AR</h4>
               <ol className="space-y-2 text-xs text-gray-400">
-                <li className="flex gap-2"><span className="text-bilhar-gold font-bold">1.</span> Abra no seu celular</li>
-                <li className="flex gap-2"><span className="text-bilhar-gold font-bold">2.</span> Clique em &ldquo;Ver no meu Ambiente&rdquo;</li>
-                <li className="flex gap-2"><span className="text-bilhar-gold font-bold">3.</span> Aponte a câmera para o chão</li>
-                <li className="flex gap-2"><span className="text-bilhar-gold font-bold">4.</span> Posicione a mesa onde quiser</li>
+                <li className="flex gap-2"><span className="text-bilhar-green-bright font-bold">1.</span> Abra no seu celular</li>
+                <li className="flex gap-2"><span className="text-bilhar-green-bright font-bold">2.</span> Clique em &ldquo;Ver no meu Ambiente&rdquo;</li>
+                <li className="flex gap-2"><span className="text-bilhar-green-bright font-bold">3.</span> Aponte a câmera para o chão</li>
+                <li className="flex gap-2"><span className="text-bilhar-green-bright font-bold">4.</span> Posicione a mesa onde quiser</li>
               </ol>
             </div>
           </div>

@@ -116,7 +116,7 @@ export function CheckoutClient() {
                   {/* Personal Data */}
                   <div className="glass-card p-6">
                     <h2 className="font-semibold text-white mb-4 flex items-center gap-2">
-                      <User className="w-4 h-4 text-bilhar-gold" />
+                      <User style={{ width: 16, height: 16, color: "#2FD48A" }} />
                       Dados Pessoais
                     </h2>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -131,7 +131,7 @@ export function CheckoutClient() {
                           <input
                             {...register(field.name)}
                             placeholder={field.placeholder}
-                            className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none transition-colors"
+                            className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none transition-colors"
                           />
                           {errors[field.name] && (
                             <p className="text-xs text-red-400 mt-1">{errors[field.name]?.message}</p>
@@ -144,7 +144,7 @@ export function CheckoutClient() {
                   {/* Address */}
                   <div className="glass-card p-6">
                     <h2 className="font-semibold text-white mb-4 flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-bilhar-gold" />
+                      <MapPin style={{ width: 16, height: 16, color: "#2FD48A" }} />
                       Endereço de Entrega
                     </h2>
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -159,33 +159,33 @@ export function CheckoutClient() {
                             setCep(val);
                             if (val.length === 8) handleCepLookup(val);
                           }}
-                          className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none"
+                          className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none"
                         />
                         {isLoadingCep && <p className="text-xs text-bilhar-green-bright mt-1">Buscando endereço...</p>}
                       </div>
                       <div className="sm:col-span-2">
                         <label className="text-xs text-gray-400 mb-1.5 block">Logradouro</label>
-                        <input {...register("logradouro")} placeholder="Rua, Av., etc." className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input {...register("logradouro")} placeholder="Rua, Av., etc." className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Número</label>
-                        <input {...register("numero")} placeholder="123" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input {...register("numero")} placeholder="123" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Complemento</label>
-                        <input {...register("complemento")} placeholder="Apto, sala, etc." className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input {...register("complemento")} placeholder="Apto, sala, etc." className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Bairro</label>
-                        <input {...register("bairro")} placeholder="Seu bairro" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input {...register("bairro")} placeholder="Seu bairro" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Cidade</label>
-                        <input {...register("cidade")} placeholder="Sua cidade" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input {...register("cidade")} placeholder="Sua cidade" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Estado</label>
-                        <input {...register("estado")} placeholder="SP" maxLength={2} className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input {...register("estado")} placeholder="SP" maxLength={2} className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                     </div>
 
@@ -221,7 +221,7 @@ export function CheckoutClient() {
                   {/* Payment Methods */}
                   <div className="glass-card p-6">
                     <h2 className="font-semibold text-white mb-4 flex items-center gap-2">
-                      <CreditCard className="w-4 h-4 text-bilhar-gold" />
+                      <CreditCard style={{ width: 16, height: 16, color: "#2FD48A" }} />
                       Forma de Pagamento
                     </h2>
                     <div className="space-y-3">
@@ -231,11 +231,11 @@ export function CheckoutClient() {
                           onClick={() => setPaymentMethod(method.id)}
                           className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center gap-4 ${
                             paymentMethod === method.id
-                              ? "border-bilhar-gold bg-bilhar-gold/5"
+                              ? "border-bilhar-green bg-bilhar-green/5"
                               : "border-bilhar-green/20 hover:border-bilhar-green/40"
                           }`}
                         >
-                          <method.icon className={`w-5 h-5 ${paymentMethod === method.id ? "text-bilhar-gold" : "text-gray-400"}`} />
+                          <method.icon style={{ width: 20, height: 20, color: paymentMethod === method.id ? "#2FD48A" : "rgba(107,114,128,1)" }} />
                           <div className="flex-1">
                             <p className="text-sm font-medium text-white">{method.label}</p>
                             <p className="text-xs text-gray-400">{method.desc}</p>
@@ -274,21 +274,21 @@ export function CheckoutClient() {
                     >
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Número do Cartão</label>
-                        <input placeholder="0000 0000 0000 0000" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                        <input placeholder="0000 0000 0000 0000" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                       </div>
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="text-xs text-gray-400 mb-1.5 block">Validade</label>
-                          <input placeholder="MM/AA" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                          <input placeholder="MM/AA" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                         </div>
                         <div>
                           <label className="text-xs text-gray-400 mb-1.5 block">CVV</label>
-                          <input placeholder="000" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-gold focus:outline-none" />
+                          <input placeholder="000" className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white placeholder:text-gray-500 focus:border-bilhar-green/50 focus:outline-none" />
                         </div>
                       </div>
                       <div>
                         <label className="text-xs text-gray-400 mb-1.5 block">Parcelas</label>
-                        <select className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white focus:border-bilhar-gold focus:outline-none">
+                        <select className="w-full bg-bilhar-dark border border-bilhar-green/20 rounded-xl px-4 py-3 text-sm text-white focus:border-bilhar-green/50 focus:outline-none">
                           {[1, 2, 3, 6, 10, 12].map((p) => (
                             <option key={p} value={p}>{p}x de {formatCurrency(total / p)} {p === 1 || p <= 3 ? "(sem juros)" : ""}</option>
                           ))}
@@ -320,7 +320,7 @@ export function CheckoutClient() {
           <div>
             <div className="glass-card p-6 sticky top-24">
               <h2 className="font-semibold text-white mb-4 flex items-center gap-2">
-                <Package className="w-4 h-4 text-bilhar-gold" />
+                <Package style={{ width: 16, height: 16, color: "#2FD48A" }} />
                 Resumo do Pedido
               </h2>
 

@@ -28,13 +28,13 @@ export function StepIndicator({ currentStep, onStepClick }: StepIndicatorProps) 
       <div className="sm:hidden flex items-center gap-3 w-full max-w-xs">
         <div className="flex-1 h-1.5 bg-bilhar-dark rounded-full overflow-hidden">
           <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-bilhar-gold to-bilhar-gold-light"
+            className="h-full rounded-full bg-gradient-to-r from-bilhar-green to-bilhar-green-bright"
             initial={false}
             animate={{ width: `${progressPct}%` }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
           />
         </div>
-        <span className="text-[0.65rem] font-bold text-bilhar-gold whitespace-nowrap flex-shrink-0">
+        <span className="text-[0.65rem] font-bold text-bilhar-green-bright whitespace-nowrap flex-shrink-0">
           {currentStep + 1} / {total}
         </span>
       </div>
@@ -59,24 +59,24 @@ export function StepIndicator({ currentStep, onStepClick }: StepIndicatorProps) 
                     done
                       ? "bg-bilhar-green border-bilhar-green text-white"
                       : active
-                      ? "bg-bilhar-gold border-bilhar-gold text-bilhar-dark shadow-[0_0_12px_rgba(201,168,76,0.4)]"
-                      : "bg-transparent border-bilhar-gold/20 text-gray-600 group-hover:border-bilhar-gold/40"
+                      ? "bg-bilhar-green border-bilhar-green text-white shadow-[0_0_12px_rgba(26,122,82,0.4)]"
+                      : "bg-transparent border-bilhar-green/20 text-gray-600 group-hover:border-bilhar-green/40"
                   )}
                 >
                   {done ? <Check className="w-3 h-3" strokeWidth={3} /> : step.id + 1}
                 </motion.div>
                 <span className={cn(
                   "text-[0.6rem] font-semibold tracking-wide transition-colors whitespace-nowrap",
-                  active ? "text-bilhar-gold" : done ? "text-bilhar-green-bright" : "text-gray-600"
+                  active ? "text-bilhar-green-bright" : done ? "text-bilhar-green-bright" : "text-gray-600"
                 )}>
                   {step.label}
                 </span>
               </button>
 
               {index < STEPS.length - 1 && (
-                <div className="w-7 lg:w-10 h-px mx-1 mb-[18px] overflow-hidden rounded-full bg-bilhar-gold/10">
+                <div className="w-7 lg:w-10 h-px mx-1 mb-[18px] overflow-hidden rounded-full bg-bilhar-green/10">
                   <motion.div
-                    className="h-full bg-bilhar-gold"
+                    className="h-full bg-bilhar-green"
                     initial={false}
                     animate={{ width: done ? "100%" : "0%" }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
