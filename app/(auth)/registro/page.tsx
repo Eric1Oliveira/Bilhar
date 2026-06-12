@@ -232,7 +232,7 @@ export default function RegistroPage() {
               animate={{ opacity: 1, scale: 1 }}
               className="luxury-card p-8 text-center"
             >
-              <div className="w-14 h-14 rounded-full border" style={{ background: "rgba(47,212,138,0.12)", borderColor: "rgba(47,212,138,0.3)" }} flex items-center justify-center mx-auto mb-5">
+              <div className="w-14 h-14 rounded-full border flex items-center justify-center mx-auto mb-5" style={{ background: "rgba(47,212,138,0.12)", borderColor: "rgba(47,212,138,0.3)" }}>
                 <Sparkles style={{ width: 24, height: 24, color: "#2FD48A" }} />
               </div>
               <h3 className="font-display font-bold text-white text-xl mb-2">Conta criada!</h3>
