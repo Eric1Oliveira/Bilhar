@@ -83,7 +83,7 @@ function AuthPanel() {
           >
             {PERKS.map(({ icon: Icon, label }, i) => (
               <div key={i} className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg border" style={{ background: "rgba(47,212,138,0.08)", borderColor: "rgba(47,212,138,0.2)" }} flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg border flex items-center justify-center flex-shrink-0" style={{ background: "rgba(47,212,138,0.08)", borderColor: "rgba(47,212,138,0.2)" }}>
                   <Icon style={{ width: 14, height: 14, color: "#2FD48A" }} />
                 </div>
                 <span className="text-sm text-gray-300">{label}</span>
