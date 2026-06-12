@@ -124,8 +124,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       >
         <span className="text-white font-medium text-sm leading-relaxed">{q}</span>
         <ChevronDown
-          className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-200" style={{ color: "#2FD48A" }}
-          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+          className="w-4 h-4 flex-shrink-0 mt-0.5 transition-transform duration-200"
+          style={{ color: "#2FD48A", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </button>
       <AnimatePresence>
